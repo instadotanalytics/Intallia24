@@ -1,0 +1,751 @@
+/* Reset and Base Styles */
+.pageWrapper {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  /* margin-bottom: 15px; */
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: #6b7280;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.08) 0%,
+    rgba(6, 182, 212, 0.08) 100%
+  );
+  padding: 80px 0;
+}
+
+.titleWithIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.heroIcon {
+  font-size: 2.8rem;
+  color: #10b981;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.mainHeading {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #1f2937;
+}
+
+.valuesIntro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #1f2937;
+}
+
+.valuesIntro p {
+  margin-bottom: 15px;
+}
+
+.joinTeamBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  color: white;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.joinTeamBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.joinTeamBtn:hover svg {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+/* Pillars Section */
+.pillarsSection {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.pillarsCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.pillarCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 35px 30px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border-top: 5px solid transparent;
+}
+
+.pillarCard:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.pillarCard:nth-child(1):hover {
+  border-top-color: #10b981;
+}
+.pillarCard:nth-child(2):hover {
+  border-top-color: #06b6d4;
+}
+.pillarCard:nth-child(3):hover {
+  border-top-color: #059669;
+}
+.pillarCard:nth-child(4):hover {
+  border-top-color: #0891b2;
+}
+.pillarCard:nth-child(5):hover {
+  border-top-color: #047857;
+}
+.pillarCard:nth-child(6):hover {
+  border-top-color: #0e7490;
+}
+
+.pillarIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #d1fae5, #cffafe);
+  color: #10b981;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.pillarCard:hover .pillarIcon {
+  transform: scale(1.1) rotate(10deg);
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: white;
+}
+
+.pillarTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+.pillarDescription {
+  color: #6b7280;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.pillarFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pillarFeatures span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #059669;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.checkIcon {
+  color: #10b981;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Values in Action Section */
+.valuesActionSection {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.05) 0%,
+    rgba(6, 182, 212, 0.05) 100%
+  );
+  padding: 80px 0;
+}
+
+.actionIcon {
+  font-size: 2.5rem;
+  color: #06b6d4;
+}
+
+.valuesActionIntro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.valuesStatsCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.valuesStatCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 25px;
+  text-align: center;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.valuesStatCard:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.valuesStatIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, #d1fae5, #cffafe);
+  color: #10b981;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.valuesStatCard:hover .valuesStatIcon {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: white;
+}
+
+.valuesStatCount {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.valuesStatLabel {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.valuesStatDescription {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Culture Section */
+.cultureSection {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.cultureIntro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.cultureCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.cultureCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cultureCard:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #10b981;
+}
+
+.cultureCardHeader {
+  margin-bottom: 25px;
+}
+
+.cultureCardIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #d1fae5, #cffafe);
+  color: #10b981;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.cultureCard:hover .cultureCardIcon {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: white;
+}
+
+.cultureCardTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.cultureCardSubtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cultureCardFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cultureCardFeatures span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f2937;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.featureIcon {
+  color: #06b6d4;
+  font-size: 1rem;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+/* Beliefs Section */
+.beliefsSection {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.05) 0%,
+    rgba(6, 182, 212, 0.05) 100%
+  );
+  padding: 80px 0;
+}
+
+.beliefsIntro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.beliefsCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.beliefCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.beliefCard:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.beliefIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #d1fae5, #cffafe);
+  color: #10b981;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.beliefCard:hover .beliefIcon {
+  transform: rotate(15deg);
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: white;
+}
+
+.beliefTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+.beliefDescription {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* FAQ Section */
+.faqSection {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.faqContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  border-left-color: #06b6d4;
+}
+
+.faqQuestion {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faqQuestion:hover {
+  background-color: rgba(6, 182, 212, 0.05);
+}
+
+.faqQuestion h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.faqIcon {
+  color: #06b6d4;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.faqItem.active .faqIcon {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.5s ease,
+    padding 0.5s ease;
+}
+
+.faqItem.active .faqAnswer {
+  max-height: 500px;
+  padding: 0 25px 25px;
+}
+
+.faqAnswer p {
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.08) 0%,
+    rgba(6, 182, 212, 0.08) 100%
+  );
+  padding: 80px 0;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  border-radius: 2px;
+}
+
+.ctaSubtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 220px;
+  justify-content: center;
+}
+
+.primaryBtn {
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.secondaryBtn {
+  background-color: white;
+  color: #10b981;
+  border: 2px solid #10b981;
+}
+
+.secondaryBtn:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  color: white;
+  border-color: transparent;
+}
+
+.ctaBtn:hover svg {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .pillarsCards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection,
+  .pillarsSection,
+  .valuesActionSection,
+  .cultureSection,
+  .beliefsSection,
+  .faqSection,
+  .ctaSection {
+    padding: 60px 0;
+  }
+
+  .titleWithIcon {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .heroIcon,
+  .actionIcon {
+    margin-bottom: 10px;
+  }
+
+  .pillarsCards {
+    grid-template-columns: 1fr;
+  }
+
+  .valuesStatsCards,
+  .cultureCards,
+  .beliefsCards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .faqQuestion {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .valuesStatsCards,
+  .cultureCards,
+  .beliefsCards {
+    grid-template-columns: 1fr;
+  }
+
+  .pillarCard,
+  .valuesStatCard,
+  .cultureCard,
+  .beliefCard {
+    padding: 25px 20px;
+  }
+
+  .valuesStatCount {
+    font-size: 2.8rem;
+  }
+
+  .faqQuestion h3 {
+    font-size: 1rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+}

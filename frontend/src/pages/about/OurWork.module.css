@@ -1,0 +1,458 @@
+/* ── Hero ── */
+.hero {
+  position: relative;
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #0a192f 0%, #0f3460 60%, #0a192f 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 55vh;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 40% 60%,
+    rgba(16, 185, 129, 0.18) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.heroTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 22px;
+  line-height: 1.15;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.78);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ── Section Base ── */
+.section {
+  padding: 90px 20px;
+  background: #fff;
+}
+
+.sectionAlt {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.04) 0%,
+    rgba(6, 182, 212, 0.04) 100%
+  );
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.sectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 12px;
+}
+
+.sectionSub {
+  font-size: 1.05rem;
+  color: #6b7280;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Principles ── */
+.principlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.principleCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 34px 26px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+  transition: all 0.5s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.principleCard.cardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.principleCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+  border-color: #10b981;
+}
+
+.principleAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 16px 16px 0 0;
+  opacity: 0.8;
+}
+
+.principleIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.principleCard:hover .principleIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.principleTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.principleDesc {
+  font-size: 0.93rem;
+  color: #6b7280;
+  line-height: 1.75;
+}
+
+/* ── Journey ── */
+.journeyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.journeyCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid #10b981;
+  transition: all 0.5s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.journeyCard.cardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.journeyCard:hover {
+  transform: translateY(-8px) translateX(4px);
+  box-shadow: 0 16px 36px rgba(16, 185, 129, 0.12);
+}
+
+.journeyBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.journeyIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #d1fae5, #cffafe);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.journeyCard:hover .journeyIcon {
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: #fff;
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.journeyTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.journeyDesc {
+  font-size: 0.92rem;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Collaborative ── */
+.collaborativeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+}
+
+.collaborativeCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 2px solid transparent;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.collaborativeCard.cardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.collaborativeCard:hover {
+  transform: translateY(-10px);
+  border-color: #06b6d4;
+  box-shadow: 0 18px 40px rgba(6, 182, 212, 0.12);
+}
+
+.collaborativeIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+  transition: transform 0.4s ease;
+}
+
+.collaborativeCard:hover .collaborativeIcon {
+  transform: scale(1.12) rotate(10deg);
+}
+
+.collaborativeTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.collaborativeDesc {
+  font-size: 0.92rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+/* ── Dev Process ── */
+.devProcessGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+}
+
+.devProcessCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 34px 26px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(90deg, #10b981, #06b6d4) 1;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.devProcessCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(16, 185, 129, 0.12);
+}
+
+.devBadge {
+  display: inline-block;
+  background: linear-gradient(90deg, #d1fae5, #cffafe);
+  color: #0f766e;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.devTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.devDesc {
+  font-size: 0.93rem;
+  color: #6b7280;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── FAQ ── */
+.faqContainer {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.faqList {
+  background: #f8fafc;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+}
+
+.faqItem {
+  border-bottom: 1px solid #e2e8f0;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.faqItem:last-child {
+  border-bottom: none;
+}
+
+.faqOpen {
+  border-left-color: #10b981;
+  background: linear-gradient(135deg, #f0fdf4, #ecfeff);
+}
+
+.faqQ {
+  width: 100%;
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+
+.faqQ span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a202c;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.faqOpen .faqQ span {
+  color: #10b981;
+}
+
+.faqChevron {
+  color: #06b6d4;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.faqChevronOpen {
+  transform: rotate(180deg);
+}
+
+.faqA {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  padding: 0 26px;
+}
+.faqAOpen {
+  max-height: 400px;
+  padding: 0 26px 22px;
+}
+.faqA p {
+  color: #4a5568;
+  line-height: 1.75;
+  margin: 0;
+  font-size: 0.97rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+  .hero {
+    min-height: 45vh;
+    padding: 80px 20px 60px;
+  }
+  .journeyGrid {
+    grid-template-columns: 1fr;
+  }
+  .devProcessGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .principlesGrid {
+    grid-template-columns: 1fr;
+  }
+  .collaborativeGrid {
+    grid-template-columns: 1fr;
+  }
+}

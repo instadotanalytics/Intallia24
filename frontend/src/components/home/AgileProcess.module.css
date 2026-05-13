@@ -1,0 +1,230 @@
+.section {
+  padding: 80px 20px;
+  background-color: #f8fafc;
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.7rem, 4vw, 2.8rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.desc {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 0 auto 70px;
+  max-width: 860px;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  width: 90%;
+  height: 4px;
+  background: linear-gradient(to right, #0ea5e9, #10b981);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.timelineItems {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.timelineItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.timelineIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: linear-gradient(135deg, #0ea5e9, #10b981);
+}
+
+.timelineIcon:hover {
+  transform: scale(1.15);
+}
+
+.timelineLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  text-align: center;
+  background: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Process Cards */
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  border-top: 5px solid;
+  opacity: 0;
+  transition: all 0.7s ease;
+  max-width: 520px;
+}
+
+.cardLeft {
+  border-top-color: #0ea5e9;
+  transform: translateX(-80px);
+  align-self: flex-start;
+}
+
+.cardRight {
+  border-top-color: #10b981;
+  transform: translateX(80px);
+  align-self: flex-end;
+}
+
+.card.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.12);
+}
+
+.cardNum {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0ea5e9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.cardTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.activitiesTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0ea5e9;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.cardRight .activitiesTitle {
+  color: #10b981;
+}
+
+.activitiesList {
+  list-style: none;
+}
+
+.activitiesList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.checkIcon {
+  color: #10b981;
+  font-size: 13px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .timelineLine {
+    display: none;
+  }
+  .timelineItems {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+  .card {
+    max-width: 100%;
+    align-self: stretch;
+  }
+  .cardLeft,
+  .cardRight {
+    transform: translateY(30px);
+  }
+  .card.animated {
+    transform: translateY(0);
+  }
+}

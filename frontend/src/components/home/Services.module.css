@@ -1,0 +1,300 @@
+.section {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background grid pattern for tech feel */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#1e293b 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ----- Header Styles (Updated for Dark BG) ----- */
+.header {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.headingWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 50px;
+  padding: 10px 24px;
+  margin-bottom: 22px;
+  backdrop-filter: blur(4px);
+}
+
+.headingIcon {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+}
+
+.headingLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #10b981;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.mainHeading {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 160px 18px;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.desc {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ----- Grid Layout (Responsive) ----- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ----- Card Styles (Image Background + Overlay) ----- */
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  border-radius: 20px;
+}
+
+.cardLink.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  min-height: 380px;
+  border-radius: 20px;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Dark Gradient Overlay - Ensures text is readable on any image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 15, 8, 0.7) 0%,
+    rgba(6, 29, 20, 0.9) 100%
+  );
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+/* Content z-index to stay above overlay */
+.cardIcon,
+.cardTitle,
+.cardDesc,
+.learnMore {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.cardIcon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  transition: all 0.4s ease;
+}
+
+.cardTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #06b6d4;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-top: auto;
+  width: fit-content;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* ----- New Hover Effects (Modern & Attractive) ----- */
+.cardLink:hover .card {
+  transform: scale(1.02) translateY(-10px);
+  box-shadow: 0 30px 40px -15px rgba(6, 182, 212, 0.4);
+  border: 1px solid rgba(6, 182, 212, 0.6);
+}
+
+.cardLink:hover .overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 182, 212, 0.5) 0%,
+    rgba(2, 15, 8, 0.9) 100%
+  );
+}
+
+.cardLink:hover .cardIcon {
+  background: #10b981;
+  color: #fff;
+  border-color: #10b981;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+.cardLink:hover .learnMore {
+  color: #fff;
+  border-bottom-color: #10b981;
+}
+
+.cardLink:hover .arrow {
+  transform: translateX(6px);
+}
+
+/* ----- Responsive Design (Optimized for Mobile & Tablet) ----- */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .card {
+    min-height: 360px;
+    padding: 30px 20px;
+  }
+
+  .cardTitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .headingWrapper {
+    padding: 8px 20px;
+  }
+
+  .headingLabel {
+    font-size: 0.8rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .card {
+    min-height: 340px;
+  }
+
+  /* Disable scale on mobile for better performance/feel */
+  .cardLink:hover .card {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .mainHeading {
+    font-size: 1.8rem;
+    margin: 0 auto;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+
+  .cardDesc {
+    font-size: 0.95rem;
+  }
+}

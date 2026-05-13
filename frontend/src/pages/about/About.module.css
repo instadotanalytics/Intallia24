@@ -1,0 +1,511 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 700;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* margin-bottom: 10px; */
+}
+
+.sectionSubtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* About */
+.aboutSection {
+  padding: 80px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.04) 0%,
+    rgba(6, 182, 212, 0.04) 100%
+  );
+}
+
+.mainHeading {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 14px;
+}
+
+.typewriter {
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cursor {
+  color: #06b6d4;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.aboutContent {
+  max-width: 880px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+.aboutContent p {
+  margin-bottom: 18px;
+  color: #374151;
+}
+
+/* Vision Mission */
+.vmSection {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.cardsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 36px;
+}
+
+.vmCard {
+  border-radius: 16px;
+  padding: 38px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 5px solid transparent;
+}
+
+.vmCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.visionCard:hover {
+  border-top-color: #10b981;
+}
+.missionCard:hover {
+  border-top-color: #06b6d4;
+}
+
+.vmHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.vmIcon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+  font-size: 28px;
+  transition: all 0.3s ease;
+}
+
+.visionIcon {
+  background: linear-gradient(135deg, #d1fae5, rgba(16, 185, 129, 0.2));
+  color: #10b981;
+}
+.missionIcon {
+  background: linear-gradient(135deg, #cffafe, rgba(6, 182, 212, 0.2));
+  color: #06b6d4;
+}
+.vmCard:hover .vmIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.vmTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.visionTitle {
+  color: #10b981;
+}
+.missionTitle {
+  color: #06b6d4;
+}
+
+.vmCard p {
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+/* Core Values */
+.valuesSection {
+  padding: 80px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.03) 0%,
+    rgba(6, 182, 212, 0.03) 100%
+  );
+}
+
+.titleWithIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.sectionIcon {
+  font-size: 2rem;
+  color: #10b981;
+  margin-right: 12px;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px;
+}
+
+.valueCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.valueCard:hover {
+  transform: translateY(-10px);
+  border-color: #10b981;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.valueIcon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: #fff;
+  font-size: 26px;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover .valueIcon {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.valueTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+.valueDesc {
+  color: #6b7280;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Developers */
+.devsSection {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.devsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 26px;
+  margin-bottom: 36px;
+}
+
+.devCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.devCard:hover {
+  transform: translateY(-10px);
+  border-color: #06b6d4;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.devImg {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  border: 4px solid #cffafe;
+}
+
+.devName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+.devRole {
+  font-size: 0.9rem;
+  color: #06b6d4;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.devExp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #6b7280;
+  font-size: 0.88rem;
+  margin-bottom: 12px;
+}
+.expIcon {
+  color: #10b981;
+}
+
+.devTech {
+  display: inline-block;
+  background: linear-gradient(90deg, #d1fae5, #cffafe);
+  color: #1f2937;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.viewMoreWrap {
+  text-align: center;
+}
+
+.viewMoreBtn {
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.viewMoreBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+}
+
+/* Numbers */
+.numbersSection {
+  padding: 80px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.04) 0%,
+    rgba(6, 182, 212, 0.04) 100%
+  );
+}
+
+.numbersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px;
+}
+
+.numberCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 38px 18px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.numberCard:hover {
+  transform: translateY(-10px);
+}
+
+.numberIcon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: #fff;
+  font-size: 26px;
+}
+
+.numberCount {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 8px;
+}
+
+.numberLabel {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+.numberDesc {
+  color: #6b7280;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* FAQ */
+.faqSection {
+  padding: 80px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.03) 0%,
+    rgba(6, 182, 212, 0.03) 100%
+  );
+}
+
+.faqContainer {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.faqActive {
+  border-left-color: #06b6d4;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e6f7f5 100%);
+}
+
+.faqQuestion {
+  width: 100%;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  gap: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.faqQuestion span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f2937;
+  flex: 1;
+}
+.faqActive .faqQuestion span {
+  color: #10b981;
+}
+
+.faqIcon {
+  color: #06b6d4;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.faqIconOpen {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.faqAnswerOpen {
+  padding: 0 24px 22px;
+  max-height: 400px;
+}
+.faqAnswer p {
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .cardsRow {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .devsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  .vmCard {
+    padding: 26px;
+  }
+  .vmHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+  .vmIcon {
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+  .numbersGrid {
+    grid-template-columns: 1fr;
+  }
+}
