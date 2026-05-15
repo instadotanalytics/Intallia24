@@ -1,5 +1,5 @@
 // src/utils/api.js
-const BASE_URL = import.meta.env.VITE_API_URL || "https://intallia24-backend.onrender.com/api";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://intallia24-backend.onrender.com/api/contact";
 
 const getToken = () => localStorage.getItem("intallia_token");
 
