@@ -13,7 +13,7 @@ const app = express();
 // ─── Allowed Origins ──────────────────────────────────────────
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://intallia24.onrender.com",
+  "https://intallia24-frontend.onrender.com",
 ];
 
 // ─── Middleware ───────────────────────────────────────────────

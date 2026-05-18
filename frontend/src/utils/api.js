@@ -2,7 +2,7 @@
 
 const BASE_URL =
   import.meta.env.VITE_API_URL ||
-  "https://intallia24-backend.onrender.com/api";
+  "https://intallia24-etk2.onrender.com/api";
 
 const getToken = () => localStorage.getItem("intallia_token");
 
