@@ -4,25 +4,19 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
+  service: "gmail",
 
   auth: {
     user: process.env.MAIL_USER,
     pass: process.env.MAIL_PASS,
   },
 
-  pool: true,
-  maxConnections: 5,
-  maxMessages: 100,
-
-  connectionTimeout: 10000,
-  greetingTimeout: 10000,
-  socketTimeout: 10000,
+  tls: {
+    rejectUnauthorized: false,
+  },
 });
 
-// only for logs (not blocking)
+// only for logs
 transporter.verify((err) => {
   if (err) {
     console.error("❌ Mail transporter error:", err.message);
